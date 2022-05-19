@@ -38,21 +38,24 @@
         <div class="hidden space-x-7 lg:flex">
           <a
             href="#"
-            class="font-semibold text-darkBlue hover:opacity-80 dark:text-gray-100 dark:hover:text-gray-300"
+            class="font-semibold text-prime hover:opacity-80 dark:text-gray-100 dark:hover:text-gray-300"
             >Home</a
           >
           <a
             href="#skill"
-            class="font-semibold text-darkBlue hover:opacity-80 dark:text-gray-100 dark:hover:text-gray-300"
+            class="font-semibold text-prime hover:opacity-80 dark:text-gray-100 dark:hover:text-gray-300"
             >Skills</a
           >
           <a
             href="#job"
-            class="font-semibold text-darkBlue hover:opacity-80 dark:text-gray-100 dark:hover:text-gray-300"
+            class="font-semibold text-prime hover:opacity-80 dark:text-gray-100 dark:hover:text-gray-300"
             >Projects</a
           >
           <span class="h-6 w-[1px] bg-lightBlue"></span>
-          <a href="#" class="font-bold"
+          <a
+            href="https://github.com/popskully"
+            target="_blank"
+            class="font-bold"
             ><i
               class="fa-brands fa-github text-gray-400 hover:text-darkBlue"
             ></i
@@ -97,7 +100,10 @@
             >Projects</a
           >
           <div class="flex space-x-6 pt-3">
-            <a href="#" class="font-bold"
+            <a
+              href="https://github.com/popskully"
+              target="_blank"
+              class="font-bold"
               ><i
                 class="fa-brands fa-github text-gray-400 hover:text-gray-600"
               ></i
@@ -138,8 +144,10 @@
           <p
             class="z-20 max-w-lg text-center font-normal text-zinc-600 dark:text-gray-400 sm:m-1 md:justify-start md:text-left"
           >
-            Manage makes it simple for software teams to plan day-to-day task
-            while keeping the larger team goals in view.
+            Hi there👋, I hope you're not lost🤗. I’m Davian, an aspiring
+            Fullstack Developer👨‍💻. My current <b class="animate-pulse">❤️</b> is
+            Frontend Web Dev.
+            <!-- <b class="text-sm font-light">Until someone else steals it🌚</b> -->
           </p>
           <div class="flex justify-center pt-4 md:justify-start">
             <span
@@ -147,7 +155,7 @@
             >
             </span>
             <a
-              href="#"
+              href="#contact"
               class="baseline z-10 rounded-xl bg-prime p-3 px-8 pt-3 font-light text-white hover:opacity-90 sm:m-1"
               >Hire Me</a
             >
@@ -178,18 +186,31 @@
       </div>
       <!-- social icons -->
       <div
-        class="absolute right-0 bottom-0 flex h-2/5 w-1/6 flex-col rounded-tl-[60px] bg-prime py-8"
+        class="absolute right-0 bottom-0 z-30 flex h-2/5 w-1/6 flex-col rounded-tl-[60px] bg-prime py-8"
       >
-        <a href="#" class="m-auto text-4xl text-white"
+        <a
+          href="https://www.linkedin.com/in/davianlounds"
+          target="_blank"
+          class="m-auto text-2xl text-white hover:opacity-50 md:text-4xl"
+        >
+          <i class="fa-brands fa-linkedin-in"></i
+        ></a>
+        <a
+          href="https://www.instagram.com/lemon_kxng/"
+          target="_blank"
+          class="m-auto text-2xl text-white hover:opacity-50 md:text-4xl"
           ><i class="fa-brands fa-instagram"></i
         ></a>
-        <a href="#" class="m-auto text-4xl text-white"
+        <a
+          href="https://twitter.com/lemon_kxng"
+          target="_blank"
+          class="m-auto text-2xl text-white hover:opacity-50 md:text-4xl"
           ><i class="fa-brands fa-twitter"></i
         ></a>
       </div>
       <a href="#skill">
         <span
-          class="flex animate-bounce flex-col justify-center pt-10 text-center text-gray-100 md:pt-16 xl:mt-36"
+          class="mt-10 flex animate-bounce flex-col justify-center text-center text-prime hover:opacity-80 dark:text-gray-100 md:mt-16 xl:mt-36"
         >
           <p>Skills</p>
           <i class="fa-solid fa-arrow-down-long"></i>
@@ -198,14 +219,17 @@
     </section>
 
     <!-- skills -->
-    <section id="skill" class="relative -top-24 bg-prime pb-10">
+    <section id="" class="relative -top-24 bg-prime pb-10">
       <div class="container mx-auto items-center">
         <!-- head -->
-        <div class="border-b-2 border-gray-100 p-10 dark:border-gray-800">
+        <div
+          id="skill"
+          class="border-b border-gray-100 p-10 dark:border-gray-300"
+        >
           <h1
-            class="text-center text-3xl font-medium text-gray-100 dark:text-gray-800"
+            class="text-center text-3xl font-medium text-gray-100 dark:text-gray-300"
           >
-            Skills
+            Skills & Tools
           </h1>
         </div>
         <!-- icons -->
@@ -217,7 +241,14 @@
               class="mx-auto rounded-full border-4 bg-gray-100 p-5 opacity-50 grayscale hover:border-blue-400 hover:opacity-100 hover:grayscale-0 dark:border-gray-800 dark:bg-gray-800"
             >
               <img src="./img/icons/photoshop.svg" alt="Adobe photoshop" />
+              <span
+                class="py-auto absolute left-0 top-0 mx-auto flex h-full w-full items-center rounded-full p-2 text-center align-middle text-sm text-gray-100 opacity-0 hover:opacity-90"
+                id="photoshop-tooltip"
+                role="tooltip"
+                ><p class="rounded-md bg-gray-800 p-1">Adobe Photoshop</p>
+              </span>
             </span>
+
             <span
               class="mx-auto rounded-full border-4 bg-gray-100 p-5 opacity-50 grayscale hover:border-blue-400 hover:opacity-100 hover:grayscale-0 dark:border-gray-800 dark:bg-gray-800"
             >
@@ -225,76 +256,188 @@
                 src="./img/icons/adobe-illustrator.svg"
                 alt="Adobe illustrator"
               />
+              <span
+                class="py-auto absolute left-0 top-0 mx-auto flex h-full w-full items-center rounded-full p-2 text-center align-middle text-sm text-gray-100 opacity-0 hover:opacity-90"
+                id="photoshop-tooltip"
+                role="tooltip"
+                ><p class="rounded-md bg-gray-800 p-1">Adobe Illustrator</p>
+              </span>
             </span>
             <span
               class="mx-auto rounded-full border-4 bg-gray-100 p-5 opacity-50 grayscale hover:border-blue-400 hover:opacity-100 hover:grayscale-0 dark:border-gray-800 dark:bg-gray-800"
             >
-              <img src="./img/icons/figma.svg" alt="Adobe indesign" />
+              <img src="./img/icons/figma.svg" alt="Figma" />
+              <span
+                class="py-auto absolute left-0 top-0 mx-auto flex h-full w-full items-center rounded-full p-2 text-center align-middle text-sm text-gray-100 opacity-0 hover:opacity-90"
+                id="photoshop-tooltip"
+                role="tooltip"
+                ><p class="rounded-md bg-gray-800 p-1 text-center">Figma</p>
+              </span>
             </span>
             <span
               class="mx-auto rounded-full border-4 bg-gray-100 p-5 opacity-50 grayscale hover:border-blue-400 hover:opacity-100 hover:grayscale-0 dark:border-gray-800 dark:bg-gray-800"
             >
-              <img src="./img/icons/html-5.svg" alt="Adobe sketch" />
+              <img src="./img/icons/html-5.svg" alt="HTML" />
+              <span
+                class="py-auto absolute left-0 top-0 mx-auto flex h-full w-full items-center rounded-full p-2 text-center align-middle text-sm text-gray-100 opacity-0 hover:opacity-90"
+                id="photoshop-tooltip"
+                role="tooltip"
+                ><p class="rounded-md bg-gray-800 p-1">HTML5</p>
+              </span>
             </span>
             <span
               class="mx-auto rounded-full border-4 bg-gray-100 p-5 opacity-50 grayscale hover:border-blue-400 hover:opacity-100 hover:grayscale-0 dark:border-gray-800 dark:bg-gray-800"
             >
-              <img src="./img/icons/c.svg" alt="" />
+              <img src="./img/icons/css3.svg" alt="css" />
+              <span
+                class="py-auto absolute left-0 top-0 mx-auto flex h-full w-full items-center rounded-full p-2 text-center align-middle text-sm text-gray-100 opacity-0 hover:opacity-90"
+                id="photoshop-tooltip"
+                role="tooltip"
+                ><p class="rounded-md bg-gray-800 p-1">CSS3</p>
+              </span>
             </span>
             <span
               class="mx-auto rounded-full border-4 bg-gray-100 p-5 opacity-50 grayscale hover:border-blue-400 hover:opacity-100 hover:grayscale-0 dark:border-gray-800 dark:bg-gray-800"
             >
-              <img src="./img/icons/c-sharp.svg" alt="" />
+              <img src="./img/icons/c.svg" alt="c" />
+              <span
+                class="py-auto absolute left-0 top-0 mx-auto flex h-full w-full items-center rounded-full p-2 text-center align-middle text-[10px] text-gray-100 opacity-0 hover:opacity-90 md:text-sm"
+                id="photoshop-tooltip"
+                role="tooltip"
+                ><p class="rounded-md bg-gray-800 p-1">C Programming</p>
+              </span>
             </span>
             <span
               class="mx-auto rounded-full border-4 bg-gray-100 p-5 opacity-50 grayscale hover:border-blue-400 hover:opacity-100 hover:grayscale-0 dark:border-gray-800 dark:bg-gray-800"
             >
-              <img src="./img/icons/git.svg" alt="" />
+              <img src="./img/icons/c-sharp.svg" alt="c-sharp" />
+              <span
+                class="py-auto absolute left-0 top-0 mx-auto flex h-full w-full items-center rounded-full p-2 text-center align-middle text-[10px] text-gray-100 opacity-0 hover:opacity-90 md:text-sm"
+                id="photoshop-tooltip"
+                role="tooltip"
+                ><p class="rounded-md bg-gray-800 p-1">C# Programming</p>
+              </span>
             </span>
             <span
               class="mx-auto rounded-full border-4 bg-gray-100 p-5 opacity-50 grayscale hover:border-blue-400 hover:opacity-100 hover:grayscale-0 dark:border-gray-800 dark:bg-gray-800"
             >
-              <img src="./img/icons/java.svg" alt="" />
+              <img src="./img/icons/git.svg" alt="git" />
+              <span
+                class="py-auto absolute left-0 top-0 mx-auto flex h-full w-full items-center rounded-full p-2 text-center align-middle text-sm text-gray-100 opacity-0 hover:opacity-90"
+                id="photoshop-tooltip"
+                role="tooltip"
+                ><p class="rounded-md bg-gray-800 p-1">Git</p>
+              </span>
             </span>
             <span
               class="mx-auto rounded-full border-4 bg-gray-100 p-5 opacity-50 grayscale hover:border-blue-400 hover:opacity-100 hover:grayscale-0 dark:border-gray-800 dark:bg-gray-800"
             >
-              <img src="./img/icons/javascript.svg" alt="" />
+              <img src="./img/icons/java.svg" alt="Java" />
+              <span
+                class="py-auto absolute left-0 top-0 mx-auto flex h-full w-full items-center rounded-full p-2 text-center align-middle text-sm text-gray-100 opacity-0 hover:opacity-90"
+                id="photoshop-tooltip"
+                role="tooltip"
+                ><p class="rounded-md bg-gray-800 p-1">Java</p>
+              </span>
             </span>
             <span
               class="mx-auto rounded-full border-4 bg-gray-100 p-5 opacity-50 grayscale hover:border-blue-400 hover:opacity-100 hover:grayscale-0 dark:border-gray-800 dark:bg-gray-800"
             >
-              <img src="./img/icons/Laravel.svg" alt="" />
+              <img src="./img/icons/javascript.svg" alt="javascript" />
+              <span
+                class="py-auto absolute left-0 top-0 mx-auto flex h-full w-full items-center rounded-full p-2 text-center align-middle text-sm text-gray-100 opacity-0 hover:opacity-90"
+                id="photoshop-tooltip"
+                role="tooltip"
+                ><p class="rounded-md bg-gray-800 p-1">Javascript</p>
+              </span>
             </span>
             <span
               class="mx-auto rounded-full border-4 bg-gray-100 p-5 opacity-50 grayscale hover:border-blue-400 hover:opacity-100 hover:grayscale-0 dark:border-gray-800 dark:bg-gray-800"
             >
-              <img src="./img/icons/mysql.svg" alt="" />
+              <img src="./img/icons/Laravel.svg" alt="Laravel" />
+              <span
+                class="py-auto absolute left-0 top-0 mx-auto flex h-full w-full items-center rounded-full p-2 text-center align-middle text-sm text-gray-100 opacity-0 hover:opacity-90"
+                id="photoshop-tooltip"
+                role="tooltip"
+                ><p class="rounded-md bg-gray-800 p-1">Laravel</p>
+              </span>
             </span>
             <span
               class="mx-auto rounded-full border-4 bg-gray-100 p-5 opacity-50 grayscale hover:border-blue-400 hover:opacity-100 hover:grayscale-0 dark:border-gray-800 dark:bg-gray-800"
             >
-              <img src="./img/icons/php.svg" alt="" />
+              <img src="./img/icons/mysql.svg" alt="mysql" />
+              <span
+                class="py-auto absolute left-0 top-0 mx-auto flex h-full w-full items-center rounded-full p-2 text-center align-middle text-sm text-gray-100 opacity-0 hover:opacity-90"
+                id="photoshop-tooltip"
+                role="tooltip"
+                ><p class="rounded-md bg-gray-800 p-1">MySql</p>
+              </span>
             </span>
             <span
               class="mx-auto rounded-full border-4 bg-gray-100 p-5 opacity-50 grayscale hover:border-blue-400 hover:opacity-100 hover:grayscale-0 dark:border-gray-800 dark:bg-gray-800"
             >
-              <img src="./img/icons/python.svg" alt="" />
+              <img src="./img/icons/php.svg" alt="php" />
+              <span
+                class="py-auto absolute left-0 top-0 mx-auto flex h-full w-full items-center rounded-full p-2 text-center align-middle text-sm text-gray-100 opacity-0 hover:opacity-90"
+                id="photoshop-tooltip"
+                role="tooltip"
+                ><p class="rounded-md bg-gray-800 p-1">Php</p>
+              </span>
             </span>
             <span
               class="mx-auto rounded-full border-4 bg-gray-100 p-5 opacity-50 grayscale hover:border-blue-400 hover:opacity-100 hover:grayscale-0 dark:border-gray-800 dark:bg-gray-800"
             >
-              <img src="./img/icons/tailwindcss.svg" alt="" />
+              <img src="./img/icons/python.svg" alt="python" />
+              <span
+                class="py-auto absolute left-0 top-0 mx-auto flex h-full w-full items-center rounded-full p-2 text-center align-middle text-sm text-gray-100 opacity-0 hover:opacity-90"
+                id="photoshop-tooltip"
+                role="tooltip"
+                ><p class="rounded-md bg-gray-800 p-1">Python</p>
+              </span>
             </span>
             <span
               class="mx-auto rounded-full border-4 bg-gray-100 p-5 opacity-50 grayscale hover:border-blue-400 hover:opacity-100 hover:grayscale-0 dark:border-gray-800 dark:bg-gray-800"
             >
-              <img src="./img/icons/Vuejs.svg" alt="" />
+              <img src="./img/icons/tailwindcss.svg" alt="tailwindcss" />
+              <span
+                class="py-auto absolute left-0 top-0 mx-auto flex h-full w-full items-center rounded-full p-2 text-center align-middle text-sm text-gray-100 opacity-0 hover:opacity-90"
+                id="photoshop-tooltip"
+                role="tooltip"
+                ><p class="rounded-md bg-gray-800 p-1">Tailwindcss</p>
+              </span>
             </span>
             <span
               class="mx-auto rounded-full border-4 bg-gray-100 p-5 opacity-50 grayscale hover:border-blue-400 hover:opacity-100 hover:grayscale-0 dark:border-gray-800 dark:bg-gray-800"
             >
-              <img src="./img/icons/wordpress.svg" alt="" />
+              <img src="./img/icons/Vuejs.svg" alt="VueJs" />
+              <span
+                class="py-auto absolute left-0 top-0 mx-auto flex h-full w-full items-center rounded-full p-2 text-center align-middle text-sm text-gray-100 opacity-0 hover:opacity-90"
+                id="photoshop-tooltip"
+                role="tooltip"
+                ><p class="rounded-md bg-gray-800 p-1">VueJs</p>
+              </span>
+            </span>
+            <span
+              class="mx-auto rounded-full border-4 bg-gray-100 p-5 opacity-50 grayscale hover:border-blue-400 hover:opacity-100 hover:grayscale-0 dark:border-gray-800 dark:bg-gray-800"
+            >
+              <img src="./img/icons/wordpress.svg" alt="wordpress" />
+              <span
+                class="py-auto absolute left-0 top-0 mx-auto flex h-full w-full items-center rounded-full p-2 text-center align-middle text-sm text-gray-100 opacity-0 hover:opacity-90"
+                id="photoshop-tooltip"
+                role="tooltip"
+                ><p class="rounded-md bg-gray-800 p-1">Wordpress</p>
+              </span>
+            </span>
+            <span
+              class="mx-auto rounded-full border-4 bg-gray-100 p-5 opacity-50 grayscale hover:border-blue-400 hover:opacity-100 hover:grayscale-0 dark:border-gray-800 dark:bg-gray-800"
+            >
+              <img src="./img/icons/postman.svg" alt="postman" />
+              <span
+                class="py-auto absolute left-0 top-0 mx-auto flex h-full w-full items-center rounded-full p-2 text-center align-middle text-sm text-gray-100 opacity-0 hover:opacity-90"
+                id="photoshop-tooltip"
+                role="tooltip"
+                ><p class="rounded-md bg-gray-800 p-1">Postman</p>
+              </span>
             </span>
           </div>
         </div>
@@ -337,13 +480,12 @@
                   class="text-sm text-gray-200 dark:text-gray-300 md:text-base"
                 >
                   A user-friendly CRUD web app built using VueJs, TailwindCSS &
-                  Laravel. Data entered in this application is stored in a
-                  database, which is then displayed to users on the Experience
-                  Kingston mobile app.
+                  Laravel.
                 </p>
                 <div class="flex justify-center p-5">
                   <a
-                    href="#"
+                    target="_blank"
+                    href="https://play.google.com/store/apps/details?id=com.utech.sapna.utechmaps&hl=en&gl=US"
                     class="rounded-full bg-gray-100 p-3 text-center text-lg text-prime hover:bg-lightBlue dark:bg-gray-700 dark:text-gray-500 dark:hover:bg-blue-400 dark:hover:text-gray-700 md:p-5 md:text-xl"
                   >
                     <i class="fa-solid fa-link"></i>
@@ -371,14 +513,13 @@
                 <p
                   class="text-sm text-gray-200 dark:text-gray-300 md:text-base"
                 >
-                  A user-friendly CRUD web app built using VueJs, TailwindCSS &
-                  Laravel. Data entered in this application is stored in a
-                  database, which is then displayed to users on the Experience
-                  Kingston mobile app.
+                  A web app created to make the process of obtaining an
+                  internship more efficient.
                 </p>
                 <div class="flex justify-center p-5">
                   <a
-                    href="#"
+                    target="_blank"
+                    href="https://internship.utechsapna.com/"
                     class="rounded-full bg-gray-100 p-3 text-center text-lg text-prime hover:bg-lightBlue dark:bg-gray-700 dark:text-gray-500 dark:hover:bg-blue-400 dark:hover:text-gray-700 md:p-5 md:text-xl"
                   >
                     <i class="fa-solid fa-link"></i>
@@ -406,14 +547,13 @@
                 <p
                   class="text-sm text-gray-200 dark:text-gray-300 md:text-base"
                 >
-                  A user-friendly CRUD web app built using VueJs, TailwindCSS &
-                  Laravel. Data entered in this application is stored in a
-                  database, which is then displayed to users on the Experience
-                  Kingston mobile app.
+                  This web app is a peronal project of mine that was created
+                  with SvelteKit and Poke API🐒.
                 </p>
                 <div class="flex justify-center p-5">
                   <a
-                    href="#"
+                    target="_blank"
+                    href="https://github.com/popskully/pokemon"
                     class="rounded-full bg-gray-100 p-3 text-center text-lg text-prime hover:bg-lightBlue dark:bg-gray-700 dark:text-gray-500 dark:hover:bg-blue-400 dark:hover:text-gray-700 md:p-5 md:text-xl"
                   >
                     <i class="fa-solid fa-link"></i>
@@ -441,10 +581,8 @@
                 <p
                   class="text-sm text-gray-200 dark:text-gray-300 md:text-base"
                 >
-                  A user-friendly CRUD web app built using VueJs, TailwindCSS &
-                  Laravel. Data entered in this application is stored in a
-                  database, which is then displayed to users on the Experience
-                  Kingston mobile app.
+                  A web site? A portfolio? An online resume? Call it whatever,
+                  this is it. You're using it right now😉.
                 </p>
                 <div class="flex justify-center p-5">
                   <a
@@ -476,10 +614,9 @@
                 <p
                   class="text-sm text-gray-200 dark:text-gray-300 md:text-base"
                 >
-                  A user-friendly CRUD web app built using VueJs, TailwindCSS &
-                  Laravel. Data entered in this application is stored in a
-                  database, which is then displayed to users on the Experience
-                  Kingston mobile app.
+                  This project was created to make online advertising in Jamaica
+                  easier and more affordable for everyone. Unfortunately, it was
+                  discontinued due to the lack of funding😭.
                 </p>
                 <div class="flex justify-center p-5">
                   <a
@@ -511,10 +648,8 @@
                 <p
                   class="text-sm text-gray-200 dark:text-gray-300 md:text-base"
                 >
-                  A user-friendly CRUD web app built using VueJs, TailwindCSS &
-                  Laravel. Data entered in this application is stored in a
-                  database, which is then displayed to users on the Experience
-                  Kingston mobile app.
+                  A bot created to scrape popular local advertising sites to
+                  populate ShopInJm's database when it was newly launched.
                 </p>
                 <div class="flex justify-center p-5">
                   <a
@@ -534,14 +669,58 @@
       </div>
     </section>
 
+    <!-- contact form -->
+    <section id="contact" class="bg-prime py-10">
+      <div class="container relative z-10 mx-auto">
+        <div class="p-5">
+          <h1
+            class="text-center text-4xl text-gray-100 dark:text-gray-300 md:text-6xl"
+          >
+            Get In Touch
+          </h1>
+          <div
+            class="flex flex-row flex-nowrap justify-center space-x-5 px-0 py-10 md:px-16"
+          >
+            <input
+              id="name"
+              type="text"
+              placeholder="Name"
+              class="w-full rounded-lg bg-gray-100/50 p-3 text-gray-100 outline-2 outline-blue-400 ring placeholder:text-gray-100 hover:ring-blue-400 dark:bg-gray-800/50 dark:text-gray-300 dark:outline-gray-800/30 dark:placeholder:text-gray-300 md:w-1/3"
+            />
+            <input
+              id="email"
+              type="email"
+              placeholder="Email"
+              class="w-full rounded-lg bg-gray-100/50 p-3 text-gray-100 outline-2 outline-blue-400 ring placeholder:text-gray-100 hover:ring-blue-400 dark:bg-gray-800/50 dark:text-gray-300 dark:outline-gray-800/30 dark:placeholder:text-gray-300 md:w-1/3"
+            />
+          </div>
+          <div class="flex flex-row flex-nowrap justify-center">
+            <textarea
+              id="msg"
+              rows="10"
+              class="w-full rounded-lg bg-gray-100/50 p-6 text-gray-100 outline-2 outline-blue-400 ring placeholder:text-gray-100 hover:ring-blue-400 dark:bg-gray-800/50 dark:text-gray-300 dark:outline-gray-800/30 dark:placeholder:text-gray-300 md:w-4/6"
+              placeholder="Type a message..."
+            ></textarea>
+          </div>
+          <div class="mt-10 flex flex-row flex-nowrap justify-center">
+            <button
+              class="baseline z-10 rounded-xl bg-gray-100/50 p-3 px-8 pt-3 text-center font-medium text-white ring hover:opacity-90 hover:ring-blue-400 dark:bg-gray-800/50 dark:text-gray-300 dark:outline-gray-800/30"
+            >
+              Contact
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- footer -->
-    <footer class="relative bg-prime">
+    <footer class="z-10 bg-prime">
       <div class="container mx-auto items-center py-10">
-        <h1 class="text-center text-white dark:text-gray-800">
+        <h1 class="text-center text-white dark:text-gray-300">
           Create with <i class="fa-solid fa-heart"></i> by Davian
         </h1>
-        <p class="text-center text-sm text-white dark:text-gray-800">
-          All rights reserved
+        <p class="text-center text-sm text-white dark:text-gray-300">
+          &copy 2022 iAmDavian.com | All rights reserved
         </p>
       </div>
     </footer>
