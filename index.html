@@ -17,6 +17,48 @@
       rel="stylesheet"
     />
     <title>index</title>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init("H3avTzE7EDZDHAA3w");
+      })();
+
+      function sendmail() {
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let message = document.getElementById("message").value;
+
+        // var params = {
+        //   full_name: name,
+        //   email_ad: email,
+        //   msg: 'message'
+        // };
+
+        emailjs
+          .send("portfolio_service", "contact_form", {
+            user_name: name,
+            user_email: email,
+            message: message,
+            to_name: "Davian",
+          })
+          .then(
+            function (res) {
+              alert(
+                "Message successfully sent! Feel free to contact me @ davianlounds@gmail.com if you do not receive a response within 24-48 hours."
+              );
+            },
+            function (error) {
+              alert(
+                "Failed to send message. Please feel free to manually send an email to davianlounds@gmail.com"
+              );
+            }
+          );
+      }
+    </script>
   </head>
   <body
     onload="document.body.style.opacity='1'"
@@ -178,7 +220,7 @@
             />
           </svg>
           <img
-            src="img/man-hd.png"
+            src="img/memoji.png"
             alt="person"
             class="bottom-0 right-44 z-0 m-auto my-6 w-3/12 rounded-full bg-prime bg-center md:absolute md:my-auto md:block md:w-4/12 md:rounded-none md:bg-transparent xl:right-1/4"
           />
@@ -224,7 +266,7 @@
         <!-- head -->
         <div
           id="skill"
-          class="border-b border-gray-100 p-10 dark:border-gray-300"
+          class="border-b border-gray-100 py-16 dark:border-gray-300"
         >
           <h1
             class="text-center text-3xl font-medium text-gray-100 dark:text-gray-300"
@@ -233,7 +275,7 @@
           </h1>
         </div>
         <!-- icons -->
-        <div class="p-10 text-7xl">
+        <div class="px-10 py-16 text-7xl">
           <div
             class="px-auto grid grid-cols-3 content-center gap-10 md:grid-cols-4 lg:grid-cols-5"
           >
@@ -672,7 +714,7 @@
     <!-- contact form -->
     <section id="contact" class="bg-prime py-10">
       <div class="container relative z-10 mx-auto">
-        <div class="p-5">
+        <form id="contact-form" class="p-5">
           <h1
             class="text-center text-4xl text-gray-100 dark:text-gray-300 md:text-6xl"
           >
@@ -681,14 +723,18 @@
           <div
             class="flex flex-row flex-nowrap justify-center space-x-5 px-0 py-10 md:px-16"
           >
+            <input type="hidden" name="contact_number" />
             <input
+              type="text"
               id="name"
+              name="user_name"
               type="text"
               placeholder="Name"
               class="w-full rounded-lg bg-gray-100/50 p-3 text-gray-100 outline-2 outline-blue-400 ring placeholder:text-gray-100 hover:ring-blue-400 dark:bg-gray-800/50 dark:text-gray-300 dark:outline-gray-800/30 dark:placeholder:text-gray-300 md:w-1/3"
             />
             <input
               id="email"
+              name="user_email"
               type="email"
               placeholder="Email"
               class="w-full rounded-lg bg-gray-100/50 p-3 text-gray-100 outline-2 outline-blue-400 ring placeholder:text-gray-100 hover:ring-blue-400 dark:bg-gray-800/50 dark:text-gray-300 dark:outline-gray-800/30 dark:placeholder:text-gray-300 md:w-1/3"
@@ -696,7 +742,8 @@
           </div>
           <div class="flex flex-row flex-nowrap justify-center">
             <textarea
-              id="msg"
+              id="message"
+              name="message"
               rows="10"
               class="w-full rounded-lg bg-gray-100/50 p-6 text-gray-100 outline-2 outline-blue-400 ring placeholder:text-gray-100 hover:ring-blue-400 dark:bg-gray-800/50 dark:text-gray-300 dark:outline-gray-800/30 dark:placeholder:text-gray-300 md:w-4/6"
               placeholder="Type a message..."
@@ -704,12 +751,27 @@
           </div>
           <div class="mt-10 flex flex-row flex-nowrap justify-center">
             <button
-              class="baseline z-10 rounded-xl bg-gray-100/50 p-3 px-8 pt-3 text-center font-medium text-white ring hover:opacity-90 hover:ring-blue-400 dark:bg-gray-800/50 dark:text-gray-300 dark:outline-gray-800/30"
+              class="baseline z-10 cursor-pointer rounded-xl bg-gray-100/50 p-3 px-8 pt-3 text-center font-medium text-white ring hover:opacity-90 hover:ring-blue-400 dark:bg-gray-800/50 dark:text-gray-300 dark:outline-gray-800/30"
+              onclick="sendmail()"
+              type="button"
             >
-              Contact
+              Send
             </button>
           </div>
-        </div>
+        </form>
+
+        <!-- test form -->
+        <!-- <form id="contact-form">
+          <input type="hidden" name="contact_number" />
+          <label>Name</label>
+          <input type="text" id="name" name="user_name" />
+          <label>Email</label>
+          <input type="email" id="email" name="user_email" />
+          <label>Message</label>
+          <textarea id="message" name="message"></textarea>
+          
+          <button onclick="sendmail()" type="button">Send</button>
+        </form> -->
       </div>
     </section>
 
@@ -730,5 +792,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/script.js"></script>
+    <script src="js/tuk.js"></script>
   </body>
 </html>
