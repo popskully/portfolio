@@ -16,45 +16,31 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script src="js/tuk.js"></script>
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init("H3avTzE7EDZDHAA3w");
+      })();
+    </script>
     <title>index</title>
   </head>
   <body>
-    <div class="relative bg-white dark:bg-gray-800">
-      <div class="flex flex-col sm:flex-row sm:justify-around">
-        <div class="h-screen w-72">
-          <nav class="mt-10 px-6">
-            <a
-              class="my-6 flex items-center rounded-lg p-2 text-gray-600 transition-colors duration-200 hover:bg-gray-100 hover:text-gray-800 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
-              href="#"
-            >
-              <span class="mx-4 text-lg font-normal"> Element </span>
-              <span class="flex-grow text-right"> </span>
-            </a>
-            <a
-              class="my-6 flex items-center rounded-lg bg-gray-100 p-2 text-gray-800 transition-colors duration-200 hover:bg-gray-100 hover:text-gray-800 dark:bg-gray-600 dark:text-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-              href="#"
-            >
-              <span class="mx-4 text-lg font-normal"> Form </span>
-              <span class="flex-grow text-right"> </span>
-            </a>
-            <a
-              class="my-6 flex items-center rounded-lg p-2 text-gray-600 transition-colors duration-200 hover:bg-gray-100 hover:text-gray-800 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
-              href="#"
-            >
-              <span class="mx-4 text-lg font-normal"> Commerce </span>
-              <span class="flex-grow text-right"> </span>
-            </a>
-            <a
-              class="my-6 flex items-center rounded-lg p-2 text-gray-600 transition-colors duration-200 hover:bg-gray-100 hover:text-gray-800 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
-              href="#"
-            >
-              <span class="mx-4 text-lg font-normal"> Navigation </span>
-              <span class="flex-grow text-right"> </span>
-            </a>
-          </nav>
-        </div>
-      </div>
-    </div>
+    <form id="contact-form">
+      <!-- <input type="hidden" id="contact_number" /> -->
+      <label>Name</label>
+      <input type="text" id="name" />
+      <label>Email</label>
+      <input type="email" id="email" />
+      <label>Message</label>
+      <textarea name="message"></textarea>
+      <button onclick="SendEmail()">Send</button>
+      <!-- <input type="submit" value="Send" /> -->
+    </form>
 
     <script
       src="https://kit.fontawesome.com/b55c369e9a.js"
