@@ -42,31 +42,34 @@
         let email = document.getElementById("email").value;
         let message = document.getElementById("message").value;
 
+        if (name === "" || email === "" || message === "") {
+          alert("Please fill in all fields");
+        } else {
+          emailjs
+            .send("portfolio_service", "contact_form", {
+              user_name: name,
+              user_email: email,
+              message: message,
+              to_name: "Davian",
+            })
+            .then(
+              function (res) {
+                alert(
+                  "Message successfully sent! Feel free to contact me @ davianlounds@gmail.com if you do not receive a response within 24-48 hours."
+                );
+              },
+              function (error) {
+                alert(
+                  "Failed to send message. Please feel free to manually send an email to davianlounds@gmail.com"
+                );
+              }
+            );
+        }
         // var params = {
         //   full_name: name,
         //   email_ad: email,
         //   msg: 'message'
         // };
-
-        emailjs
-          .send("portfolio_service", "contact_form", {
-            user_name: name,
-            user_email: email,
-            message: message,
-            to_name: "Davian",
-          })
-          .then(
-            function (res) {
-              alert(
-                "Message successfully sent! Feel free to contact me @ davianlounds@gmail.com if you do not receive a response within 24-48 hours."
-              );
-            },
-            function (error) {
-              alert(
-                "Failed to send message. Please feel free to manually send an email to davianlounds@gmail.com"
-              );
-            }
-          );
       }
     </script>
   </head>
@@ -239,7 +242,7 @@
       </div>
       <!-- social icons -->
       <div
-        class="absolute right-0 bottom-0 z-30 flex h-2/5 w-1/6 flex-col rounded-tl-[60px] rounded-bl-[60px] bg-prime py-8 sm:rounded-bl-none"
+        class="absolute right-0 bottom-0 z-30 flex h-2/5 w-1/6 flex-col rounded-tl-[60px] rounded-bl-[60px] bg-prime py-8 md:rounded-bl-none"
       >
         <a
           href="https://www.linkedin.com/in/davianlounds"
@@ -807,6 +810,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/script.js"></script>
-    <script src="js/tuk.js"></script>
+    <!-- <script src="js/tuk.js"></script> -->
   </body>
 </html>

@@ -1538,6 +1538,10 @@ body {
     flex-direction: row;
   }
 
+  .md\:rounded-bl-none {
+    border-bottom-left-radius: 0px;
+  }
+
   .md\:p-5 {
     padding: 1.25rem;
   }
